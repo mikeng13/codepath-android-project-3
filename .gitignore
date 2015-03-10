@@ -30,6 +30,7 @@ proguard-project.txt
 .gradle/**
 build/**
 .idea/**
+app/**
 
 *.pydevproject
 .project
