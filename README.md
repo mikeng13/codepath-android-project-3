@@ -7,6 +7,7 @@ Timespent: 10 hours
 
 Completed user stories:
 
+Part 1:
 * [x] Required: User can sign in to Twitter using OAuth login
 * [x] Required: User can view the tweets from their home timeline
 * [x] Required: User should be displayed the username, name, and body for each tweet
@@ -28,6 +29,28 @@ Tweets are persisted into sqlite and can be displayed from the local DB
 * [ ] Bonus: User can see embedded image media within the tweet detail view
 * [ ] Bonus: Compose activity is replaced with a modal overlay
 
+Part 2:
+
+* [x] Require: User can switch between Timeline and Mention views using tabs.
+* [x] Require: User can view their home timeline tweets.
+* [x] Require: User can view the recent mentions of their username.
+* [x] Require: User can navigate to view their own profile
+* [x] Require: User can see picture, tagline, # of followers, # of following, and tweets on their profile.
+* [x] Require: User can click on the profile image in any tweet to see another user's profile.
+* [x] Require: User can see picture, tagline, # of followers, # of following, and tweets of clicked user.
+* [x] Require: Profile view should include that user's timeline
+* [x] Optional: User can view following / followers list through the profile
+* [x] Require: User can infinitely paginate any of these timelines (home, mentions, user) by scrolling to the bottom
+
+* [ ] Advanced: Robust error handling, check if internet is available, handle error cases, network failures
+* [x] Advanced: When a network request is sent, user sees an indeterminate progress indicator
+* [x] Advanced: User can "reply" to any tweet on their home timeline
+* [x] Advanced: User can click on a tweet to be taken to a "detail view" of that tweet
+* [x] Advanced: User can take favorite (and unfavorite) or reweet actions on a tweet
+* [x] Advanced: Improve the user interface and theme the app to feel twitter branded
+* [ ] Advanced: User can search for tweets matching a particular query and see results
+* [ ] Bonus: User can view their direct messages (or send new ones)
+
 Walkthrough of all user stories:
 
-![Video Walkthrough](project_3.gif)
+![Video Walkthrough](project_4.gif)
