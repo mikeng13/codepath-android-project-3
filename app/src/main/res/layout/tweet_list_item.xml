@@ -29,6 +29,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_toRightOf="@id/tvUserName"
+        android:layout_alignTop="@id/tvUserName"
+        android:layout_alignBottom="@id/tvUserName"
+        android:gravity="center_vertical"
         android:text="\@handler"
         android:id="@+id/tvUserHandle"
         android:textIsSelectable="false"
@@ -53,15 +56,27 @@
         android:text="7m ago"
         android:id="@+id/tvTimestamp"
         android:textColor="#74363636" />
+
+    <ImageButton
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_reply"
+        android:layout_alignLeft="@id/tvDescription"
+        android:layout_below="@id/tvDescription"
+        android:background="@android:color/transparent"
+        android:layout_alignTop="@id/tvRetweetCount"
+        android:layout_alignBottom="@id/tvRetweetCount"
+        android:id="@+id/ibReply"/>
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@id/tvDescription"
-        android:layout_toRightOf="@id/ivUserImage"
+        android:layout_toRightOf="@id/ibReply"
         android:text="0"
         android:id="@+id/tvRetweetCount"
         android:layout_marginTop="5dp"
         android:textColor="#363636"
+        android:layout_marginLeft="70dp"
         android:drawableLeft="@drawable/ic_retweet"
         android:gravity="center_vertical"/>
     <TextView
@@ -72,7 +87,7 @@
         android:layout_alignTop="@id/tvRetweetCount"
         android:text="0"
         android:id="@+id/tvFavoriteCount"
-        android:layout_marginLeft="100dp"
+        android:layout_marginLeft="70dp"
         android:textColor="#363636"
         android:drawableLeft="@drawable/ic_star"
         android:gravity="center_vertical"/>

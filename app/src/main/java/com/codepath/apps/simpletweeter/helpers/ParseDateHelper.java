@@ -4,6 +4,7 @@ import android.text.format.DateUtils;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
+import java.util.Date;
 import java.util.Locale;
 
 /**
@@ -30,6 +31,18 @@ public class ParseDateHelper {
         }
 
         return relativeDate;
+    }
+
+    public static Date parseDate(String rawJsonDate) {
+        SimpleDateFormat sf = new SimpleDateFormat(twitterFormat, Locale.ENGLISH);
+        sf.setLenient(true);
+        Date parsedDate = null;
+        try {
+            parsedDate = sf.parse(rawJsonDate);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return parsedDate;
     }
 
     public static String getPrettyTimeStamp(String rawJsonDate) {

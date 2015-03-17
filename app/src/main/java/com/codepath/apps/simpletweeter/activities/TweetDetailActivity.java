@@ -1,5 +1,6 @@
 package com.codepath.apps.simpletweeter.activities;
 
+import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
 import android.text.Html;
@@ -16,7 +17,7 @@ import com.codepath.apps.simpletweeter.helpers.ParseDateHelper;
 import com.codepath.apps.simpletweeter.models.Tweet;
 import com.squareup.picasso.Picasso;
 
-public class TweetDetailActivity extends ActionBarActivity {
+public class TweetDetailActivity extends ActionBarActivity implements View.OnClickListener{
 
     private Tweet tweet;
 
@@ -27,11 +28,11 @@ public class TweetDetailActivity extends ActionBarActivity {
 
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
-        tweet = (Tweet)getIntent().getParcelableExtra("tweet");
+        tweet = getIntent().getParcelableExtra("tweet");
         TextView tvUserName = (TextView)findViewById(R.id.tvUserName);
-        tvUserName.setText(tweet.userName);
+        tvUserName.setText(tweet.user.name);
         TextView tvScreenName = (TextView)findViewById(R.id.tvScreenName);
-        tvScreenName.setText(tweet.userHandle);
+        tvScreenName.setText(tweet.user.screenName);
         TextView tvBody = (TextView)findViewById(R.id.tvBody);
         tvBody.setText(tweet.text);
         TextView tvTimestamp = (TextView)findViewById(R.id.tvTimestamp);
@@ -58,8 +59,9 @@ public class TweetDetailActivity extends ActionBarActivity {
         }
 
         ImageView ivUserImage = (ImageView)findViewById(R.id.ivUserImage);
+        ivUserImage.setOnClickListener(this);
         Picasso.with(this)
-                .load(tweet.userProfileImage)
+                .load(tweet.user.profileImageUrl)
                 .into(ivUserImage);
     }
 
@@ -84,5 +86,15 @@ public class TweetDetailActivity extends ActionBarActivity {
         }
 
         return super.onOptionsItemSelected(item);
+    }
+
+
+    @Override
+    public void onClick(View v) {
+        if (v.getId() == R.id.ivUserImage) {
+            Intent i = new Intent(this, UserProfileActivity.class);
+            i.putExtra("user", tweet.user);
+            startActivity(i);
+        }
     }
 }

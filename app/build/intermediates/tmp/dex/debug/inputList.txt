@@ -1,6 +1,7 @@
 /Users/mng/Documents/Dev/android/CodePath/project_3/app/build/intermediates/classes/debug
 /Users/mng/Documents/Dev/android/CodePath/project_3/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-767f35585bc9d8de854f3618b5d49494d719e578.jar
 /Users/mng/Documents/Dev/android/CodePath/project_3/app/build/intermediates/pre-dexed/debug/codepath-utils-e357abd4c078a4ea4316139b2b12b599e7fec9a0.jar
+/Users/mng/Documents/Dev/android/CodePath/project_3/app/build/intermediates/pre-dexed/debug/classes-e475998c60ad57c240b6e4a5ed3aff428bbca88e.jar
 /Users/mng/Documents/Dev/android/CodePath/project_3/app/build/intermediates/pre-dexed/debug/codepath-oauth-0.4.1-20640603f6f9383b2536a3a3217384c59b204f60.jar
 /Users/mng/Documents/Dev/android/CodePath/project_3/app/build/intermediates/pre-dexed/debug/activeandroid-3.1.0-SNAPSHOT-a678ae81c4f14148b900aa07f6b94b7c132ae634.jar
 /Users/mng/Documents/Dev/android/CodePath/project_3/app/build/intermediates/pre-dexed/debug/scribe-codepath-0.0.3-3d400890e0a2fb6d590bf696cea80913b52cf52b.jar
